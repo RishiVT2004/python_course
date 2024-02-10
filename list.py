@@ -54,3 +54,14 @@ for x in num:
     if num.count(x) > 1:
         num.remove(x)
 print(num)
+
+#input from user 
+num = []
+n = int(input('enter size of list '))
+for i in range(n):
+    j = input()
+    num.append(j)
+
+for i in range(n):
+    print(num[i])
+
