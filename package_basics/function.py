@@ -40,3 +40,18 @@ bonus_calc(180)
 
 '''
 
+'''''' -> docstrings != comments , can be printed by python
+'''
+
+
+def square(n):
+    '''this is square function (always below the defn of function)'''
+    print(n ** 2)
+    '''this docstring is not printed'''
+
+
+square(10)
+print(square.__doc__)
+
+'''pep - 8 -> makes python readable and makes it effiecient '''
+
