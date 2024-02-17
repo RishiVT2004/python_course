@@ -76,7 +76,8 @@ A.print_mark_score()
 print(A.dsa)
 '''
 
-'''Multiple Inheritence
+'''
+#Multiple Inheritence
 
 
 class is_student:
