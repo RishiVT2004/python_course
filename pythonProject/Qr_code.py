@@ -1,7 +1,8 @@
-# install libraries
+# install libraries -> (windows -: pip install qrcode)
 # create a func that collectes text and convert it to qr code
 # save qr as a image
 # run the func()
+
 
 import qrcode
 
