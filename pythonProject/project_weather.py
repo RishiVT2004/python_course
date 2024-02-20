@@ -16,6 +16,9 @@ w_dic = json.loads(r.text)
 
 # s_list = json.loads(r.text)
 
+print(f'local time : {w_dic["location"]["localtime"]}')
+print(f'location : {w_dic["location"]["region"]}')
+print(f'country : {w_dic["location"]["country"]}')
 print(f'temp in celcius : {w_dic["current"]["temp_c"]}')
 print(f'temp in fahrenheit : {w_dic["current"]["temp_f"]}')
 print(f'wind speed : {w_dic["current"]["wind_kph"]} km/ph')
