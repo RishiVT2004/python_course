@@ -16,11 +16,7 @@ class bank_user{
         System.out.println("enter account number : ");
         account_no = sc.next();
 
-        if (account_no.length() != 10) {
-            System.out.println("length of account number");
-        }
-
-        System.out.println("enter account type : ");
+        System.out.println("enter account type (saving/salary/FD) : ");
         account_type = sc.next();
 
         System.out.println("enter account's bank balance : ");
@@ -32,7 +28,7 @@ class bank_user{
         System.out.println("Name of user : "+user_name);
         System.out.println("Account number : "+account_no);
         System.out.println("Type of Account : "+account_type);
-        System.out.println(" Account Balance : "+bank_balance);
+        System.out.println("Account Balance : "+bank_balance);
     }
 
     //Method to Deposit Money -:
@@ -44,6 +40,7 @@ class bank_user{
         bank_balance += amount;
         System.out.println("new balance : "+bank_balance);
     }
+
 
     //Method to Withdraw Money -:
     public void withdraw_money(){
@@ -69,18 +66,21 @@ class bank{
         user.open_account();
 
         System.out.println("\n --- Banking System Application ---");
-        System.out.println("1. Display account details \n 2. Deposit the amount \n 3. Withdraw the amount \n 4.Exit ");
+        System.out.println(" 1.Display account details\n 2.Deposit the amount\n 3.Withdraw the amount\n 4.Exit ");
         int choice = sc.nextInt();
 
         switch (choice){
             case 1:
                 user.account_info();
+                break;
             case 2:
                 user.deposit_money();
+                break;
             case 3:
                 user.withdraw_money();
+                break;
             case 4:
-                System.out.println("--- Thanks for visiting --- \n --Wish you a good day-- ");
+                System.out.println("--- Thanks for visiting --- \n --- Wish you a good day --- ");
         }
 
     }
