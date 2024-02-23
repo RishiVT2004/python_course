@@ -22,8 +22,7 @@ class bank_user{
         System.out.println("enter account's bank balance : ");
         bank_balance = sc.nextLong();
     }
-    //Displaying Bank Information -:
-
+    //Displaying User Information -:
     public void account_info(){
         System.out.println("Name of user : "+user_name);
         System.out.println("Account number : "+account_no);
@@ -32,7 +31,6 @@ class bank_user{
     }
 
     //Method to Deposit Money -:
-
     public void deposit_money(){
 
         System.out.println("Enter amount to be deposited : ");
@@ -64,24 +62,27 @@ class bank{
         Scanner sc = new Scanner(System.in);
         bank_user user = new bank_user();
         user.open_account();
+        int choice;
 
+        do {
         System.out.println("\n --- Banking System Application ---");
         System.out.println(" 1.Display account details\n 2.Deposit the amount\n 3.Withdraw the amount\n 4.Exit ");
-        int choice = sc.nextInt();
+        choice = sc.nextInt();
 
-        switch (choice){
-            case 1:
-                user.account_info();
-                break;
-            case 2:
-                user.deposit_money();
-                break;
-            case 3:
-                user.withdraw_money();
-                break;
-            case 4:
-                System.out.println("--- Thanks for visiting --- \n --- Wish you a good day --- ");
+        	switch (choice){
+            	case 1:
+            		user.account_info();
+            		break;
+            	case 2:
+            		user.deposit_money();
+            		break;
+            	case 3:
+            		user.withdraw_money();
+            		break;
+            	case 4:
+            		System.out.println("--- Thanks for visiting --- \n --- Wish you a good day --- ");
         }
+        }while(choice<4 && choice>0);
 
     }
 }
